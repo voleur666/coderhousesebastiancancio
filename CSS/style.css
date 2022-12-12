@@ -1,9 +1,7 @@
-@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html {
@@ -11,71 +9,52 @@ html {
 }
 
 body {
-  background-image: url(../Recursos/Imagenes/paper-texture_\(4\).jpeg);
+  background-image: url(../Recursos/Imagenes/paper-texture.jpeg);
 }
 
+$dottedborder: 5px dotted black;
+$solidborder: 10px solid black;
 /* Navegador */
 .nav-container {
-  border: 10px solid black;
+  border: $solidborder;
 }
-
-.nav-container ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  list-style: none;
-  margin: 10px 0px;
+.nav-container {
+  ul {
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    margin: 10px 0px;
+  }
 }
-
-.nav-container a {
-  text-decoration: none;
-  font-size: 2rem;
-  color: black;
+.nav-container {
+  a {
+    text-decoration: none;
+    font-size: 2rem;
+    color: black;
+  }
 }
-
 @media screen and (max-width: 767px) {
   .nav-container ul {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    flex-direction: column;
+    align-items: center;
   }
 }
 
 /* Footer */
 .footer-container2 {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  border: 10px solid black;
+  align-items: center;
+  justify-content: space-evenly;
+  border: $solidborder;
   padding: 10px 0px;
 }
-
 .footer-container2 ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
-
 .footer-container2 p {
   font-size: 1.3rem;
 }
-
 .footer-container2 li {
   list-style: none;
 }
@@ -84,40 +63,25 @@ body {
 /* Sección 1 */
 /* Bienvenida */
 .bienv-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   margin: 50px 0px;
 }
-
 .bienv-container h1 {
   margin: 10px 0px;
   font-size: 1.8rem;
 }
-
 .bienv-container p {
   margin: 5px 0px;
   font-size: 1.5rem;
 }
-
 .bienv-container div {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  border: 5px dotted black;
+  flex-direction: column;
+  align-items: center;
+  border: $dottedborder;
   padding: 0px 20%;
 }
-
 @media screen and (max-width: 769px) {
   .bienv-container h1 {
     font-size: 1.6rem;
@@ -130,18 +94,12 @@ body {
 /* Sección 2 */
 /* Imagen de Bienvenida */
 .img-bienv-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
-
 .img-bienv-container img {
   border: 10px double black;
 }
-
 @media screen and (max-width: 1023px) {
   .img-bienv-container img {
     width: 100%;
@@ -151,25 +109,18 @@ body {
 /* Sección 3 */
 /* Título h2 */
 .seccion3-h2-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   margin: 50px 0px;
 }
-
 .seccion3-h2-container h2 {
   font-size: 1.8rem;
   padding: 10px 0px;
 }
-
 .seccion3-h2-container div {
-  border: 5px dotted black;
+  border: $dottedborder;
   padding: 0px 20%;
 }
-
 @media screen and (max-width: 769px) {
   .seccion3-h2-container h2 {
     font-size: 1.6rem;
@@ -180,96 +131,61 @@ body {
 /* Sección 4 */
 /* Imagenes */
 .seccion4 {
-  display: -webkit-box;
-  display: -ms-flexbox;
+  div {
+    border: 10px double black;
+  }
+  &__img {
+    width: 100%;
+    height: 100%;
+  }
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  justify-content: space-evenly;
   margin: 50px 0px;
-}
-
-.seccion4 div {
-  border: 10px double black;
-}
-
-.seccion4__img {
-  width: 100%;
-  height: 100%;
 }
 
 @media screen and (max-width: 426px) {
   .seccion4 {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
 }
 
 /* Sección 5 */
-/* Video */
-.secc-vid-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
 
+.secc-vid-container {
+  display: flex;
+  justify-content: center;
+}
 @media screen and (max-width: 769px) {
   .secc-vid-container div {
     width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    justify-content: center;
   }
 }
 
 /* Sección 6 */
 /* Despedida */
 .secc-desp-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   margin: 50px 0px;
 }
-
 .secc-desp-container div {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  border: 5px dotted black;
+  flex-direction: column;
+  align-items: center;
+  border: $dottedborder;
   padding: 0px 20%;
 }
-
 .secc-desp-container h2 {
   margin: 10px 0px;
   font-size: 1.8rem;
 }
-
 .secc-desp-container p {
   margin: 5px 0px;
   font-size: 1.5rem;
 }
-
 @media screen and (max-width: 769px) {
   .secc-desp-container h2 {
     font-size: 1.6rem;
@@ -279,91 +195,61 @@ body {
   }
 }
 
-/* RESERVAS */
+
 /* Sección 1 */
 /* Grid */
 .grid-container {
-  display: -ms-grid;
+    &__pulsar {
+        &:hover {
+            display: inline-block;
+            margin: 0 0.5rem;
+            animation: headShake;
+            animation-duration: 4s;
+        }
+    
+    }
+
+    &__img {
+        border: $dottedborder;
+        width: 500px;
+        height: 315px;
+    }
   display: grid;
-  -ms-grid-columns: auto auto;
-      grid-template-columns: auto auto;
-  -ms-grid-rows: auto auto;
-      grid-template-rows: auto auto;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+  justify-content: center;
   gap: 20px;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: end;
+  align-items: end;
   background-color: brown;
   margin: 100px 0px;
   padding: 10px 0px;
 }
-
-.grid-container__pulsar:hover {
-  display: inline-block;
-  margin: 0 0.5rem;
-  -webkit-animation: headShake;
-          animation: headShake;
-  -webkit-animation-duration: 4s;
-          animation-duration: 4s;
-}
-
-.grid-container__img {
-  border: 5px dotted black;
-  width: 500px;
-  height: 315px;
-}
-
 @media screen and (max-width: 1023px) {
   .grid-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    flex-direction: column;
+    align-items: center;
   }
 }
 
 @media screen and (max-width: 504px) {
-  .grid-img {
+  .grid-container__img {
     width: 100%;
     height: 100%;
   }
 }
-
 /* animaciones */
-.box:hover {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
+.box {
+  &:hover {
+    transform: scale(1.2);
+  }
 }
 
-.animation:hover {
-  display: inline-block;
-  margin: 0 0.5rem;
-  -webkit-animation: heartBeat;
-          animation: heartBeat;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
-}
-
-.reservasonline {
-  
-  border: 7px dotted black;
-  padding: 0px 20%;
-  font-size: 1.4rem;
-  margin-top: 2cm;
-  margin-bottom: 2cm;
-}
-
-/*# sourceMappingURL=style.css.map */
-
-.maps {
-  
+.animation {
+  &:hover {
+    display: inline-block;
+    margin: 0 0.5rem;
+    animation: heartBeat;
+    animation-duration: 2s;
+  }
 }
